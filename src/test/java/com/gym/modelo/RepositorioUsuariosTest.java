@@ -4,19 +4,23 @@
  */
 package com.gym.modelo;
 
+import java.util.List;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.time.LocalDate;
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 public class RepositorioUsuariosTest {
-
-    // JUnit 5 crea una carpeta temporal para cada test
+    
+    public RepositorioUsuariosTest() {
+    }
     @TempDir
     File tempDir;
 
@@ -84,5 +88,5 @@ public class RepositorioUsuariosTest {
 
         assertEquals(6, u.getMesesDuracion());
         assertTrue(u instanceof Usuario6Meses);
-    }
+    }    
 }
