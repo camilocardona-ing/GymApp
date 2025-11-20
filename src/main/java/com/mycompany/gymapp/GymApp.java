@@ -1,8 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.gymapp;
+import GUI.GymAppGui;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -11,6 +12,7 @@ package com.mycompany.gymapp;
 public class GymApp {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(() -> new GymAppGui().setVisible(true));
     }
 }
+

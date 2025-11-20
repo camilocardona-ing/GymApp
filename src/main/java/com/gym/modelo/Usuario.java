@@ -3,11 +3,10 @@ package com.gym.modelo;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-/** Clase padre/abstracta: Usuario. */
 public abstract class Usuario {
     protected String nombre;
     protected LocalDate fechaPago;
-    protected int mesesDuracion; // 1, 3 o 6
+    protected int mesesDuracion; 
 
     public Usuario(String nombre, LocalDate fechaPago, int mesesDuracion) {
         this.nombre = nombre;
@@ -32,7 +31,6 @@ public abstract class Usuario {
     public String getFechaPagoStr() { return fechaPago.format(DateTimeFormatter.ISO_LOCAL_DATE); }
     public String getFechaVencimientoStr() { return getFechaVencimiento().format(DateTimeFormatter.ISO_LOCAL_DATE); }
 
-    /** Cada plan define su propio precio total. */
     public abstract double calcularPrecio();
 
     @Override
