@@ -57,7 +57,6 @@ public class RepositorioUsuariosTest {
             fw.write("6;Juan;2025-02-05\n");
         }
 
-        // Repositorio debe leer ese archivo
         RepositorioUsuarios repo = new RepositorioUsuarios(archivo);
         List<Usuario> lista = repo.listarTodos();
 

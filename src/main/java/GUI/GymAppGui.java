@@ -81,7 +81,7 @@ public class GymAppGui extends JFrame {
         int row = 0;
 
         c.gridx = 0; c.gridy = row;
-        p.add(new JLabel("Nombre:"), c);
+        p.add(new JLabel("Nombre Completo:"), c);
 
         c.gridx = 1; c.gridy = row; c.weightx = 1;
         p.add(txtNombre, c);
